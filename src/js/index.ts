@@ -1,12 +1,9 @@
-interface Person {
-    firstName: string;
-    lastName: string;
-}
+import axios, {
+    AxiosResponse, AxiosError
+}from "../../node_modules/axios/index";
 
-function greeter(person: Person): string {
-    return "Hello, " + person.firstName + " " + person.lastName;
+interface IRecord{
+Title:string;
+Artist:string;
+YearReleased:number;
 }
-let user: Person = { firstName: "John", lastName: "Doe" };
-
-let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
